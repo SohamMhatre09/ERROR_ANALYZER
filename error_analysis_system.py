@@ -6,6 +6,7 @@ import numpy as np
 import google.generativeai as genai
 import warnings
 import re
+import os
 
 # Suppress specific InconsistentVersionWarning from scikit-learn
 warnings.filterwarnings("ignore", message="Trying to unpickle estimator TfidfTransformer", category=UserWarning)
