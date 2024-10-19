@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 
 # Initialize the ErrorAnalysisSystem
-model_path = 'error_classifier_model.joblib'
+model_path = os.path.join(os.getcwd(), 'error_classifier_model.joblib')
 api_key = os.environ.get('GOOGLE_API_KEY')
 
 if not api_key:
