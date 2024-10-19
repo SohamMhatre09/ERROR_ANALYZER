@@ -47,7 +47,7 @@ class ErrorAnalysisSystem:
     def __init__(self, model_path, api_key):
         # Initialize the ErrorClassifier and configure Google Generative AI
         self.classifier = ErrorClassifier(model_path)
-        genai.configure(api_key="AIzaSyCi_rpYtGy-ms-Io7_2fz0CpjUhCIoBFlE")
+        genai.configure(api_key=os.environ.get('GOOGLE_API_KEY'))
         self.genai_model = genai.GenerativeModel('gemini-1.5-pro')
 
     def generate_ai_response(self, error_message, model_output):
